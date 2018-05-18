@@ -10,7 +10,6 @@ replicas:
     - $HOME/.ssh:/root/ssh:ro
     - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK
   environment:
-    TABLE: commonswiki
     LOCAL_PORT: 3306
     REMOTE_HOST: enwiki.analytics.db.svc.eqiad.wmflabs
     REMOTE_PORT: 3306
