@@ -12,3 +12,15 @@ Problems
 
 * but otherwise, key prompt...
 
+
+```
+Host wiki-relicas-tunnel
+    HostName tools-login.wmflabs.org
+    IdentityFile ~/.ssh/wikitech
+    User jeanfred
+    ForwardAgent yes
+    TCPKeepAlive yes
+    ConnectTimeout 5
+    ServerAliveCountMax 10
+    ServerAliveInterval 15
+```
