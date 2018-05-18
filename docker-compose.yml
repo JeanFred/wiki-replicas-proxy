@@ -1,0 +1,13 @@
+
+mysql:
+  image: mariadb:10.0
+  links:
+    - replicas
+
+replicas:
+  build: .
+  volumes:
+    - $HOME/.ssh/config:/root/ssh/config:ro
+    - $HOME/.ssh/wikitech:/root/ssh/key:ro
+  environment:
+    TABLE: commonswiki
