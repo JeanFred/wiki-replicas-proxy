@@ -58,7 +58,7 @@ services:
       - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK
     environment:
       SSH_USER: jeanfred
-      REMOTE_HOST: commonswiki.analytics.db.svc.eqiad.wmflabs
+      WIKI_DB: commonswiki
       SSH_AUTH_SOCK:
 ```
 
@@ -81,6 +81,6 @@ services:
       - $HOME/.ssh:/root/ssh:ro
     environment:
       SSH_USER: jeanfred
-      REMOTE_HOST: commonswiki.analytics.db.svc.eqiad.wmflabs
+      WIKI_DB: commonswiki
 ```
 
