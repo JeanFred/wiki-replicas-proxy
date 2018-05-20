@@ -1,0 +1,16 @@
+version: '2'
+services:
+
+  app:
+    build: .
+    links:
+      - db
+
+  db:
+    image: toolforge-proxy
+    volumes:
+      - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK
+    environment:
+      SSH_USER: $TOOLFORGE_USER
+      WIKI_DB: commonswiki
+      SSH_AUTH_SOCK:
