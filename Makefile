@@ -5,8 +5,7 @@ all: build push
 .PHONY: build
 build:
 	docker build ./mediawiki-core-empty -t mediawiki-core-empty
-	docker build ./toolforge-proxy -t
-	 toolforge-proxy
+	docker build ./toolforge-proxy -t toolforge-proxy
 
 .PHONY: push
 push:
