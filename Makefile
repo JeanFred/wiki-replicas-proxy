@@ -4,12 +4,12 @@ all: build push
 
 .PHONY: build
 build:
-	docker build ./mediawiki-core-empty -t mediawiki-core-empty
-	docker build ./toolforge-proxy -t toolforge-proxy
+	docker build ./mediawiki-core-empty -t mediawiki-core-blank-db
+	docker build ./toolforge-proxy -t wiki-replicas-proxy
 
 .PHONY: push
 push:
-	docker tag mediawiki-core-empty jeanfred/mediawiki-core-blank-db
+	docker tag mediawiki-core-blank-db jeanfred/mediawiki-core-blank-db
 	docker push jeanfred/mediawiki-core-blank-db
-	docker tag toolforge-proxy jeanfred/wiki-replicas-toolforge-proxy
-	docker push jeanfred/toolforge-wiki-replicas-proxy
+	docker tag wiki-replicas-proxy jeanfred/wiki-replicas-proxy
+	docker push jeanfred/wiki-replicas-proxy
