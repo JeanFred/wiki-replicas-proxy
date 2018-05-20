@@ -38,6 +38,13 @@ Proxies through to Toolforge to connect to the actual Wiki-Replicas.
 
 Several methods are possible:
 
+### Variables
+
+* `WIKI_DB`: the Wiki database to connect to − e.g. `enwiki` or `commonwiki`
+* `SERVICE`: The [service](https://phabricator.wikimedia.org/phame/post/view/70/new_wiki_replica_servers_ready_for_use/), either `web` or `analytics`. Defaults to `analytics`
+* `SSH_USER`: Your Toolforge username. Defaults to None (which will probably only work if you mount your SSH config.
+* `HOST`: The SSH to proxy to. Defaults to `tools-login.wmflabs.org`
+
 ### ssh-agent
 
 Using the ssh-agent by mounting/passing SSH_AUTH_SOCK. This way you do not have to mount your keysThis may not work on OSX.
